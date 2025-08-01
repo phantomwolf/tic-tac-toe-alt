@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tic Tac Toe Alt
+
+The project uses an alternative way to implement the tic tac toe tutorial. Instead of the entire board, I'll create a state of player moves:
+
+```javascript
+const moves = [
+  { mark: "X", index: 1 },
+  { mark: "O", index: 8 },
+]
+```
+
+The board status `squares` can be deducted from `moves`. This makes rolling back pretty easy: just slice `moves`.
 
 ## Getting Started
 
