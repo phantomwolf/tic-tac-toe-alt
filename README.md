@@ -1,13 +1,11 @@
 # Tic Tac Toe Alt
 
-The project uses an alternative way to implement the tic tac toe tutorial. Instead of the entire board, I'll create a state of player moves:
+The project uses an alternative way to implement the [official tic-tac-toe tutorial](https://react.dev/learn/tutorial-tic-tac-toe).
 
-```javascript
-const moves = [
-  { mark: "X", index: 1 },
-  { mark: "O", index: 8 },
-]
-```
+## Differences from the official tic-tac-toe
+
+* Instead of using the entire `squares` as a state, this project uses player `moves` as a state, and `squares` is deducted from it.
+* TypeScript
 
 The board status `squares` can be deducted from `moves`. This makes rolling back pretty easy: just slice `moves`.
 
@@ -27,21 +25,4 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The index page is located at [src/pages/index.tsx](src/pages/index.tsx).
